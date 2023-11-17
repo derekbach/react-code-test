@@ -1,11 +1,11 @@
-import styles from "./Button.module.css"; // Import css modules stylesheet as styles
-import { FC } from 'react';
+import { FC } from "react";
+import styles from "./Button.module.css";
 
 export interface ButtonProps {
-	text: string;
+  text: string;
 }
 
-
 export const Button: FC<ButtonProps> = (props) => {
-  return <button className={styles.primary}>{props.text}</button>;
+  const { text } = props;
+  return <button className={styles.primary}>{text}</button>;
 };
