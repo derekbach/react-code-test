@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products"); // Replace with your API endpoint
+        const response = await fetch("https://fakestoreapi.com/products");
         if (!response.ok) {
           throw new Error("Network response was not ok.");
         }
