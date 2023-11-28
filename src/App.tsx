@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import { CardGrid } from "./components";
 import { type Product } from "./components";
+import { Helmet } from "react-helmet";
 
 function App() {
   const [data, setData] = useState<Product[] | null>(null);
@@ -30,6 +31,10 @@ function App() {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>My Title</title>
+        <meta name="description" content="Helmet application" />
+      </Helmet>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {data && (
