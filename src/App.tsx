@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./App.module.css";
 import { CardGrid } from "./components";
 import { type Product } from "./components";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function App() {
   const [data, setData] = useState<Product[] | null>(null);
