@@ -16,9 +16,8 @@ export const CardGrid: FC<CardGridProps> = (props) => {
     items.map((item) => {
       const { id, title, price, description, category, image, rating } = item;
       return (
-        <div className={styles.gridItem}>
+        <div key={id} className={styles.gridItem}>
           <Card
-            key={id}
             id={id}
             title={title}
             price={price}
