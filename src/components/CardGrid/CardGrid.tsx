@@ -33,7 +33,7 @@ export const CardGrid: FC<CardGridProps> = (props) => {
 
   return (
     <div>
-      <h2 className={styles.headline}>{headline}</h2>
+      <h1 className={styles.headline}>{headline}</h1>
       <p className={styles.subHeadline}>{subheadline}</p>
       <div className={styles.grid}>{cards}</div>
     </div>
