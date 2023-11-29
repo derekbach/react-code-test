@@ -15,7 +15,7 @@ export const Card: FC<CardProps> = (props) => {
       <div className={styles.contentContainer}>
         <p className={styles.category}>{category}</p>
         <h2 className={styles.title}>{title}</h2>
-        <p>${price}</p>
+        <p>${price}</p> 
         <p className={styles.description}>{description}</p>
         <p className={styles.rating}>Rating: {rating.rate} / 5</p>
         <p className={styles.reviews}>Number of reviews: {rating.count}</p>
