@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.css";
-import { CardGrid } from "./components";
-import { type Product } from "./components";
+import { CardGrid } from "./components/CardGrid";
+import { type Product } from "./components/CardGrid";
 import { Helmet } from "react-helmet-async";
 
 function App() {
@@ -38,7 +38,11 @@ function App() {
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {data && (
-        <CardGrid headline="headline" subheadline="subhead" items={data} />
+        <CardGrid
+          headline="Top Products"
+          subheadline="Our most popular products"
+          items={data}
+        />
       )}
     </div>
   );
