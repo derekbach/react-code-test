@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import styles from "./App.module.css";
-import { CardGrid } from "./components/CardGrid";
-import { type Product } from "./components/CardGrid";
+import { CardGrid, type CardProps } from "./components/CardGrid";
 import { Helmet } from "react-helmet-async";
 
 function App() {
-  const [data, setData] = useState<Product[] | null>(null);
+  const [data, setData] = useState<CardProps[] | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,8 +31,6 @@ function App() {
   return (
     <div className={styles.container}>
       <Helmet>
-        <title>My Title</title>
-        <meta name="description" content="Helmet application" />
       </Helmet>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}

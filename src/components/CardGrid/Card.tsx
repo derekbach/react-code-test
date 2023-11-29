@@ -1,22 +1,8 @@
 import { FC } from "react";
 import styles from "./Card.module.css";
+import { type CardProps } from "./CardGrid";
 
-export interface Product {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: Rating;
-}
-
-export interface Rating {
-  rate: number;
-  count: number;
-}
-
-export const Card: FC<Product> = (props) => {
+export const Card: FC<CardProps> = (props) => {
   const { title, price, description, category, image, rating } = props;
 
   return (

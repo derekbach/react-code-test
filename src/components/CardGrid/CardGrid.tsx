@@ -1,11 +1,26 @@
 import { FC } from "react";
 import styles from "./CardGrid.module.css";
-import { Card, type Product } from "./Card";
+import { Card } from "./Card";
 
 export interface CardGridProps {
   headline?: string;
   subheadline?: string;
-  items: Product[] | null;
+  items: CardProps[] | null;
+}
+
+export interface CardProps {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: Rating;
+}
+
+export interface Rating {
+  rate: number;
+  count: number;
 }
 
 export const CardGrid: FC<CardGridProps> = (props) => {
