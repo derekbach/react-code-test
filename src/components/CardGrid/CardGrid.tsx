@@ -2,36 +2,12 @@ import { FC } from "react";
 import styles from "./CardGrid.module.css";
 import { Card } from "./Card";
 
-export interface CardGridProps {
-  headline?: string;
-  subheadline?: string;
-  items: CardProps[] | null;
-}
-
-export interface CardProps {
-  id: number;
-  title: string;
-  price: number;
-  description: string;
-  category: string;
-  image: string;
-  rating: Rating;
-}
-
-export interface Rating {
-  rate: number;
-  count: number;
-}
-
 export const CardGrid: FC<CardGridProps> = (props) => {
-  const { headline, subheadline, items } = props;
-
   const cards =
-    items &&
-    items.map((item) => {
-      const { id, title, price, description, category, image, rating } = item;
+    props.items &&
+    props.items.map((item) => {
       return (
-        <div key={id} className={styles.gridItem}>
+        <div className={styles.gridItem}>
           <Card
             id={id}
             title={title}
