@@ -19,4 +19,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+}
+
+body>div {
+  min-width: 970px;
+  width: 1280px;
+}
+
+@media only screen and (max-width: 970px) {
+  body>div {
+    min-width: auto;
+    width: 400px;
+  }
 }
