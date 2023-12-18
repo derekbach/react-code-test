@@ -1,0 +1,24 @@
+.container {
+    margin: 0 auto;
+    width: 94%;
+    max-width: 1300px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gridItem {
+    width: 100%;
+}
+
+@media only screen and (min-width: 970px) {
+    .grid {
+        justify-content: space-between;
+    }
+
+    .gridItem {
+        width: 24%;
+    }
+}

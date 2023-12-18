@@ -31,6 +31,10 @@ function App() {
   return (
     <div className={styles.container}>
       <Helmet>
+        <title>Product Store</title>
+        <meta name="description" content="Our super cool store with awesome products that you should totally buy!" />
+        <meta name="keywords" content="lorem, ipsum, dolor" />
+        <meta name="author" content="Direct Supply" />
       </Helmet>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
