@@ -4,14 +4,15 @@ import { type CardProps } from "./CardGrid";
 
 export const Card: FC<CardProps> = (props) => {
 
+  const {image, description, category, title, price, rating} = props
   return (
     <div className={styles.card}>
       <img
         src={image}
         alt={description}
         className={styles.image}
-        width={1280}
-        height={720}
+        // width={1280}
+        // height={720}
       />
       <div className={styles.contentContainer}>
         <p className={styles.category}>{category}</p>

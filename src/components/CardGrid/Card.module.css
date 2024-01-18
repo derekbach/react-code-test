@@ -1,0 +1,11 @@
+@media screen and (min-width: 970px) {
+    .card {
+        width: 25%;
+    }
+}
+.card {
+    float: left;
+}
+.image {
+    width: 100%;
+}
