@@ -4,6 +4,7 @@ import { type CardProps } from "./CardGrid";
 
 export const Card: FC<CardProps> = (props) => {
 
+  const { image, description, category, title, price, rating } = props;
   return (
     <div className={styles.card}>
       <img

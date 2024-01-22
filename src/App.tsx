@@ -31,6 +31,7 @@ function App() {
   return (
     <div className={styles.container}>
       <Helmet>
+        <meta name="description" content="Listing of products" />
       </Helmet>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
